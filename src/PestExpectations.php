@@ -2,7 +2,7 @@
 
 use Illuminate\Contracts\Validation\InvokableRule;
 
-expect()->extend('toPassWith', function(mixed $value) {
+expect()->extend('toPassWith', function (mixed $value) {
     $rule = $this->value;
 
     if (! $rule instanceof InvokableRule) {
@@ -11,7 +11,7 @@ expect()->extend('toPassWith', function(mixed $value) {
 
     $passed = true;
 
-    $fail = function() use (&$passed) {
+    $fail = function () use (&$passed) {
         $passed = false;
     };
 
@@ -22,7 +22,7 @@ expect()->extend('toPassWith', function(mixed $value) {
     return $this;
 });
 
-expect()->extend('toFailWith', function(mixed $value, string $expectedMessage = null) {
+expect()->extend('toFailWith', function (mixed $value, string $expectedMessage = null) {
     $rule = $this->value;
 
     if (! $rule instanceof InvokableRule) {
@@ -32,7 +32,7 @@ expect()->extend('toFailWith', function(mixed $value, string $expectedMessage = 
     $passed = true;
     $actualMessage = null;
 
-    $fail = function(string $message = null) use (&$passed, &$actualMessage) {
+    $fail = function (string $message = null) use (&$passed, &$actualMessage) {
         $passed = false;
 
         $actualMessage = $message;
