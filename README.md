@@ -24,6 +24,8 @@ composer require spatie/pest-expectations
 
 ## Usage
 
+Once installed, you can use all of the following expectations.
+
 ### toPassWith
 
 This expectation can be used to test if [an invokable validation rule](https://laravel.com/docs/master/validation#using-rule-objects) works correctly.
@@ -31,13 +33,13 @@ This expectation can be used to test if [an invokable validation rule](https://l
 In this example, the `$value` will be given to `YourValidationRule`. The expectation will pass if your rule passed for the given value.
 
 ```php
-expect(new YourValidationRule())->toPassWith($value).
+expect(new YourValidationRule())->toPassWith($value);
 ```
 
 You can expect the your validation not to pass for the given value, by using Pest's `not()`.
 
 ```php
-expect(new YourValidationRule()->not()->toPassWith($value).
+expect(new YourValidationRule()->not()->toPassWith($value);
 ```
 
 ### toFailWith
@@ -47,13 +49,13 @@ This expectation can be used to test if [an invokable validation rule](https://l
 In this example, the `$value` will be given to `YourValidationRule`. The expectation will pass if your rule did not pass for the given value.
 
 ```php
-expect(new YourValidationRule())->toFailWith($value).
+expect(new YourValidationRule())->toFailWith($value);
 ```
 
 Optionally, you can also pass a message as the second argument. The expectation will pass is the validation rule return the given `$message`.
 
 ```php
-expect(new YourValidationRule())->toFailWith($value, 'This value is not valid.').
+expect(new YourValidationRule())->toFailWith($value, 'This value is not valid.');
 ```
 
 ### toBeEnum

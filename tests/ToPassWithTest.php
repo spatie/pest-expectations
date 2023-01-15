@@ -11,15 +11,11 @@ it('can fail when it expects the rule to pass and it did not', function () {
     expect(new ValueShouldBeTrueRule())->toPassWith(false);
 })->throws(ExpectationFailedException::class);
 
-it('can determine that a validation rule did not pass', function() {
+it('can determine that a validation rule did not pass', function () {
     expect(new ValueShouldBeTrueRule())->toFailWith(false);
     expect(new ValueShouldBeTrueRule())->toFailWith(false, 'This is the validation message');
 });
 
-it('will fail when expecting the wrong validation message', function() {
+it('will fail when expecting the wrong validation message', function () {
     expect(new ValueShouldBeTrueRule())->toFailWith(false, 'This is the wrong message');
 })->throws(ExpectationFailedException::class);
-
-
-
-
