@@ -6,5 +6,4 @@ enum TestEnum: string
 {
     case first = 'first';
     case second = 'second';
-
 }
