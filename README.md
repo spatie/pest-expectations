@@ -24,6 +24,8 @@ composer require spatie/pest-expectations
 
 ## Usage
 
+Once installed, you can use all of the following expectations.
+
 ### toPassWith
 
 This expectation can be used to test if [an invokable validation rule](https://laravel.com/docs/master/validation#using-rule-objects) works correctly.
