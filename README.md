@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/spatie/pest-expectations/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/pest-expectations/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/pest-expectations.svg?style=flat-square)](https://packagist.org/packages/spatie/pest-expectations)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+This repo contains custom expectations to be used in a [Pest](https://pestphp.com) test suite.
 
 ## Support us
 
@@ -24,9 +24,36 @@ composer require spatie/pest-expectations
 
 ## Usage
 
+### toPassWith
+
+This expectation can be used to test if [an invokable validation rule](https://laravel.com/docs/master/validation#using-rule-objects) works correctly.
+
+In this example, the `$value` will be given to `YourValidationRule`. The expectation will pass if your rule passed for the given value.
+
 ```php
-$skeleton = new Spatie\PestExpectations();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+expect(new YourValidationRule())->toPassWith($value).
+```
+
+You can expect the your validation not to pass for the given value, by using Pest's `not()`.
+
+```php
+expect(new YourValidationRule()->not()->toPassWith($value).
+```
+
+### toFailWith
+
+This expectation can be used to test if [an invokable validation rule](https://laravel.com/docs/master/validation#using-rule-objects) did not pass for a given value.
+
+In this example, the `$value` will be given to `YourValidationRule`. The expectation will pass if your rule did not pass for the given value.
+
+```php
+expect(new YourValidationRule())->toFailWith($value).
+```
+
+Optionally, you can also pass a message as the second argument. The expectation will pass is the validation rule return the given `$message`.
+
+```php
+expect(new YourValidationRule())->toFailWith($value, 'This value is not valid.').
 ```
 
 ## Testing
