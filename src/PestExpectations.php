@@ -48,3 +48,8 @@ expect()->extend('toFailWith', function (mixed $value, string $expectedMessage =
 
     return $this;
 });
+
+expect()->extend('toBeEnum', function (object $enum) {
+    expect($this->value)->toBeInstanceOf(UnitEnum::class);
+    expect($this->value->value)->toBe($enum->value);
+});
