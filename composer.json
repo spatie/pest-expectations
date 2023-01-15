@@ -18,14 +18,18 @@
         "php": "^8.1"
     },
     "require-dev": {
-        "pestphp/pest": "^1.20",
+        "illuminate/contracts": "^9.47",
         "laravel/pint": "^1.2",
+        "pestphp/pest": "^1.20",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
             "Spatie\\PestExpectations\\": "src"
-        }
+        },
+        "files": [
+            "src/PestExpectations.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
