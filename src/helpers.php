@@ -4,8 +4,8 @@ function registerSpatiePestHelpers()
 {
     function skipIfConfigNotSet(string $key): void
     {
-        if(config($key) === null) {
-           test()->markTestSkipped("{$key} is not set in the config file");
+        if (config($key) === null) {
+            test()->markTestSkipped("{$key} is not set in the config file");
         }
     }
 
@@ -18,8 +18,8 @@ function registerSpatiePestHelpers()
 
     function skipIfEnvNotSet(string $key): void
     {
-        if(env($key) === false) {
-           test()->markTestSkipped("{$key} is not set in the .env file");
+        if (env($key) === false) {
+            test()->markTestSkipped("{$key} is not set in the .env file");
         }
     }
 
