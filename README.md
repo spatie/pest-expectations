@@ -106,7 +106,7 @@ These helpers are provided by this package:
 - `whenConfig($configKey)`: only run the test when the given Laravel config key is set
 - `whenEnvVar($envVarName)`: only run the test when the given environment variable is set
 - `whenWindows`: the test will be skipped unless running on Windows
-- `whenMac': the test will be skipped unless running on macOS
+- `whenMac`: the test will be skipped unless running on macOS
 - `whenLinux`: the test will be skipped unless running on Linux
 - `whenOnGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
