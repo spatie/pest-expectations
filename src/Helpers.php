@@ -37,14 +37,14 @@ function registerSpatiePestHelpers(): void
         }
     }
 
-    function whenWindows():void
+    function whenWindows(): void
     {
         if (PHP_OS_FAMILY !== 'Windows') {
             test()->markTestSkipped('This test will only run on Windows');
         }
     }
 
-    function whenLinux():void
+    function whenLinux(): void
     {
         if (PHP_OS_FAMILY !== 'Linux') {
             test()->markTestSkipped('This test will only run on Linux');
