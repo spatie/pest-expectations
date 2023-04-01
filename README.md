@@ -112,7 +112,7 @@ These helpers are provided by this package:
 - `whenLinux`: the test will be skipped unless running on Linux
 - `whenGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
-- `whenPhpVersion($version)`: the test will be skipped unless running on the given PHP version,or higher
+- `whenPhpVersion($version)`: the test will be skipped unless running on the given PHP version, or higher. You can pass a version like `8` or `8.1`.
 
 ## Testing
 
