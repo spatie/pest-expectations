@@ -50,4 +50,11 @@ function registerSpatiePestHelpers(): void
             test()->markTestSkipped('This test will only run on Linux');
         }
     }
+
+    function whenPhpVersion($phpVersion)
+    {
+        if (version_compare(PHP_VERSION, $phpVersion, '<')) {
+            test()->markTestSkipped("This test will only run on PHP {$phpVersion} or higher");
+        }
+    }
 }

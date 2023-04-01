@@ -6,12 +6,12 @@
 
 This repo contains custom expectations to be used in a [Pest](https://pestphp.com) test suite.
 
-It also contains various helpers to make testing with Pest easier. Imagine, you only want to run a test on GitHub Actions. You can use the `onlyOnGithubActions` helper to do so.
+It also contains various helpers to make testing with Pest easier. Imagine, you only want to run a test on GitHub Actions. You can use the `whenGitHubActions` helper to do so.
 
 ```php
 it('can only run well on github actions', function () {
     // your test
-})->onlyOnGitHubActions();
+})->whenGitHubActions();
 ```
 
 ## Support us
@@ -93,12 +93,12 @@ expect('first')->not()->toBeEnum(TestEnum::first);
 
 ### Helpers
 
-This package offers various helpers that you can tack on any test. Here's an example of the `onlyOnGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
+This package offers various helpers that you can tack on any test. Here's an example of the `whenGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
 
 ```php
 it('can only run well on github actions', function () {
     // your test
-})->onlyOnGitHubActions();
+})->whenGitHubActions();
 ```
 
 To use the helpers, you should call `registerSpatiePestHelpers()` in your `Pest.php` file.
@@ -112,6 +112,7 @@ These helpers are provided by this package:
 - `whenLinux`: the test will be skipped unless running on Linux
 - `whenGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
+- `whenPhpVersion($version)`: the test will be skipped unless running on the given PHP version,or higher
 
 ## Testing
 
