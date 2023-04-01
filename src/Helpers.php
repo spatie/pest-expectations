@@ -16,7 +16,7 @@ function registerSpatiePestHelpers(): void
         }
     }
 
-    function whenOnGitHubActions(): void
+    function whenGitHubActions(): void
     {
         if (getenv('GITHUB_ACTIONS') === 'true') {
             test()->markTestSkipped('This test is skipped on GitHub Actions');

@@ -110,7 +110,7 @@ These helpers are provided by this package:
 - `whenWindows`: the test will be skipped unless running on Windows
 - `whenMac`: the test will be skipped unless running on macOS
 - `whenLinux`: the test will be skipped unless running on Linux
-- `whenOnGitHubActions()`: the test will be skipped unless running on GitHub Actions
+- `whenGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
 
 ## Testing
