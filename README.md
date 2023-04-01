@@ -101,9 +101,7 @@ it('can only run well on github actions', function () {
 })->onlyOnGitHubActions();
 ```
 
-To use the helpers, you should call `registerSpatiePestHelpers()` in your `Pest.php` file. 
-
-```php
+To use the helpers, you should call `registerSpatiePestHelpers()` in your `Pest.php` file.
 
 These helpers are provided by this package:
 
