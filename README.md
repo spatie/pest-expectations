@@ -32,7 +32,7 @@ composer require spatie/pest-expectations
 
 ## Usage
 
-Once installed, you can use the custom expectations and helpers provided by this package.
+Once installed, you can use the [custom expectations](#expectations) and [helpers](#helpers) provided by this package.
 
 ### Expectations
 
@@ -100,6 +100,10 @@ it('can only run well on github actions', function () {
     // your test
 })->onlyOnGitHubActions();
 ```
+
+To use the helpers, you should call `registerSpatiePestHelpers()` in your `Pest.php` file. 
+
+```php
 
 These helpers are provided by this package:
 
