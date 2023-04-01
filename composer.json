@@ -28,7 +28,8 @@
             "Spatie\\PestExpectations\\": "src"
         },
         "files": [
-            "src/PestExpectations.php"
+            "src/PestExpectations.php",
+            "src/Helpers.php"
         ]
     },
     "autoload-dev": {
