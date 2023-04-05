@@ -2,6 +2,10 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.3.0 - 2023-04-05
+
+- add support for Laravel 10
+
 ## 1.2.0 - 2023-04-01
 
 ### What's Changed
