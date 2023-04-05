@@ -2,11 +2,12 @@
 
 namespace Spatie\PestExpectations\Tests\TestSupport\LaravelRules;
 
-use Illuminate\Contracts\Validation\InvokableRule;
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
 
-class ValueShouldBeTrueRule implements InvokableRule
+class ValueShouldBeTrueRule implements ValidationRule
 {
-    public function __invoke($attribute, $value, $fail)
+    public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! $value) {
             $fail('This is the validation message');

@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Contracts\Validation\InvokableRule;
+use Illuminate\Contracts\Validation\ValidationRule;
 
 expect()->extend('toPassWith', function (mixed $value) {
     $rule = $this->value;
 
-    if (! $rule instanceof InvokableRule) {
-        throw new Exception('Value is not an invokable rule');
+    if (! $rule instanceof InvokableRule && ! $rule instanceof ValidationRule) {
+        throw new Exception('Value is not a rule');
     }
 
     $passed = true;
@@ -15,7 +16,13 @@ expect()->extend('toPassWith', function (mixed $value) {
         $passed = false;
     };
 
-    $rule('attribute', $value, $fail);
+    if ($rule instanceof InvokableRule) {
+        $rule('attribute', $value, $fail);
+    }
+
+    if ($rule instanceof ValidationRule) {
+        $rule->validate('attribute', $value, $fail);
+    }
 
     expect($passed)->toBeTrue();
 
@@ -25,8 +32,8 @@ expect()->extend('toPassWith', function (mixed $value) {
 expect()->extend('toFailWith', function (mixed $value, string $expectedMessage = null) {
     $rule = $this->value;
 
-    if (! $rule instanceof InvokableRule) {
-        throw new Exception('Value is not an invokable rule');
+    if (! $rule instanceof InvokableRule && ! $rule instanceof ValidationRule) {
+        throw new Exception('Value is not a rule');
     }
 
     $passed = true;
@@ -38,7 +45,13 @@ expect()->extend('toFailWith', function (mixed $value, string $expectedMessage =
         $actualMessage = $message;
     };
 
-    $rule('attribute', $value, $fail);
+    if ($rule instanceof InvokableRule) {
+        $rule('attribute', $value, $fail);
+    }
+
+    if ($rule instanceof ValidationRule) {
+        $rule->validate('attribute', $value, $fail);
+    }
 
     expect($passed)->toBeFalse();
 

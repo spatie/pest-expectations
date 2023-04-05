@@ -18,9 +18,9 @@
         "php": "^8.1"
     },
     "require-dev": {
-        "illuminate/contracts": "^9.47",
+        "illuminate/contracts": "^9.47|^10.0",
         "laravel/pint": "^1.2",
-        "pestphp/pest": "^1.20",
+        "pestphp/pest": "^1.20|^2.0",
         "spatie/ray": "^1.28"
     },
     "autoload": {
