@@ -91,6 +91,16 @@ expect($value)->not()->toBeEnum(TestEnum::second);
 expect('first')->not()->toBeEnum(TestEnum::first);
 ```
 
+#### toBeModel
+
+Expect that a value is a model an equal to the passed model.
+
+```php``
+expect($model)->toBeModel($anotherModel);
+```
+
+The expectation will only pass if both models are Eloquent models of the same class, with the same key.
+
 ### Helpers
 
 This package offers various helpers that you can tack on any test. Here's an example of the `whenGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
