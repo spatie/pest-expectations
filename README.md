@@ -95,7 +95,7 @@ expect('first')->not()->toBeEnum(TestEnum::first);
 
 Expect that a value is a model an equal to the passed model.
 
-```php``
+```php
 expect($model)->toBeModel($anotherModel);
 ```
 
