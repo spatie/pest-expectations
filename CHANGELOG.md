@@ -2,6 +2,10 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.4.1 - 2023-04-21
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.4.0...1.4.1
+
 ## 1.4.0 - 2023-04-17
 
 - add `toBeModel`
