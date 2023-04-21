@@ -25,7 +25,7 @@ function registerSpatiePestHelpers(): void
 
     function whenEnvVar(string $key): void
     {
-        if (env($key) === false) {
+        if (empty(env($key))) {
             test()->markTestSkipped("{$key} is not set in the .env file");
         }
     }
