@@ -78,7 +78,7 @@ expect()->extend('toBeEnum', function (object $enum) {
     expect($this->value->value)->toBe($enum->value);
 });
 
-expect()->extend('toBeModel', function($argument) {
+expect()->extend('toBeModel', function ($argument) {
     expect($argument)->toBeInstanceOf(Model::class, 'Argument is not a model');
     expect($this->value)->toBeInstanceOf(Model::class, 'Value is not a model');
 
