@@ -2,6 +2,19 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.5.0 - 2023-04-27
+
+### What's Changed
+
+- Bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/5
+- Added support for closures with translate method by @sdkakcy in https://github.com/spatie/pest-expectations/pull/8
+
+### New Contributors
+
+- @sdkakcy made their first contribution in https://github.com/spatie/pest-expectations/pull/8
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.4.1...1.5.0
+
 ## 1.4.1 - 2023-04-21
 
 **Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.4.0...1.4.1
