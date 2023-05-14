@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Contracts\Validation\InvokableRule;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Database\Eloquent\Model;
@@ -18,7 +17,7 @@ expect()->extend('toPassWith', function (mixed $value) {
     $fail = function (string $message = null) use (&$passed) {
         $passed = false;
 
-        return new PotentiallyTranslatedString($message ?? 'attribute', app()->make(Translator::class));
+        return new PotentiallyTranslatedString($message ?? 'attribute', app('translator'));
     };
 
     if ($rule instanceof InvokableRule) {
@@ -47,7 +46,7 @@ expect()->extend('toFailWith', function (mixed $value, string $expectedMessage =
     $fail = function (string $message = null) use (&$passed, &$actualMessage) {
         $passed = false;
 
-        $translator = app()->make(Translator::class);
+        $translator = app('translator');
 
         $actualMessage = (new PotentiallyTranslatedString($message ?? 'attribute', $translator))
             ->translate()
