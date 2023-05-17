@@ -2,6 +2,14 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.5.1 - 2023-05-17
+
+### What's Changed
+
+- Fix Translator is not instantiable by @sdkakcy in https://github.com/spatie/pest-expectations/pull/10
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.5.0...1.5.1
+
 ## 1.5.0 - 2023-04-27
 
 ### What's Changed
