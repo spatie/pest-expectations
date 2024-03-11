@@ -2,6 +2,18 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.6.0 - 2024-03-11
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/spatie/pest-expectations/pull/11
+* Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/13
+* Bump aglipanci/laravel-pint-action from 2.2.0 to 2.3.1 by @dependabot in https://github.com/spatie/pest-expectations/pull/16
+* Bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/spatie/pest-expectations/pull/15
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/spatie/pest-expectations/pull/14
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.5.1...1.6.0
+
 ## 1.5.1 - 2023-05-17
 
 ### What's Changed
