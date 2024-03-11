@@ -72,11 +72,6 @@ expect()->extend('toFailWith', function (mixed $value, string $expectedMessage =
     return $this;
 });
 
-expect()->extend('toBeEnum', function (object $enum) {
-    expect($this->value)->toBeInstanceOf(UnitEnum::class);
-    expect($this->value->value)->toBe($enum->value);
-});
-
 expect()->extend('toBeModel', function ($argument) {
     expect($argument)->toBeInstanceOf(Model::class, 'Argument is not a model');
     expect($this->value)->toBeInstanceOf(Model::class, 'Value is not a model');

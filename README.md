@@ -68,29 +68,6 @@ Optionally, you can also pass a message as the second argument. The expectation 
 expect(new YourValidationRule())->toFailWith($value, 'This value is not valid.');
 ```
 
-#### toBeEnum
-
-Expect that a value is the passed enum.
-
-Given this test enum...
-
-```php
-enum TestEnum: string
-{
-    case first = 'first';
-    case second = 'second';
-
-}
-```
-
-... all of these expectations will pass
-
-```php
-expect($value)->toBeEnum(TestEnum::first);
-expect($value)->not()->toBeEnum(TestEnum::second);
-expect('first')->not()->toBeEnum(TestEnum::first);
-```
-
 #### toBeModel
 
 Expect that a value is a model an equal to the passed model.
