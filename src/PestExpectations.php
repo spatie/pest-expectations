@@ -14,7 +14,7 @@ expect()->extend('toPassWith', function (mixed $value) {
 
     $passed = true;
 
-    $fail = function (string $message = null) use (&$passed) {
+    $fail = function (?string $message = null) use (&$passed) {
         $passed = false;
 
         return new PotentiallyTranslatedString($message ?? 'attribute', app('translator'));
@@ -33,7 +33,7 @@ expect()->extend('toPassWith', function (mixed $value) {
     return $this;
 });
 
-expect()->extend('toFailWith', function (mixed $value, string $expectedMessage = null) {
+expect()->extend('toFailWith', function (mixed $value, ?string $expectedMessage = null) {
     $rule = $this->value;
 
     if (! $rule instanceof InvokableRule && ! $rule instanceof ValidationRule) {
@@ -43,7 +43,7 @@ expect()->extend('toFailWith', function (mixed $value, string $expectedMessage =
     $passed = true;
     $actualMessage = null;
 
-    $fail = function (string $message = null) use (&$passed, &$actualMessage) {
+    $fail = function (?string $message = null) use (&$passed, &$actualMessage) {
         $passed = false;
 
         $translator = app('translator');
