@@ -2,6 +2,12 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.6.1 - 2024-03-11
+
+- support Laravel 11
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.6.0...1.6.1
+
 ## 1.6.0 - 2024-03-11
 
 ### What's Changed
