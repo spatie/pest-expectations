@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/database": "^10.7"
+        "illuminate/database": "^10.7|^11.0"
     },
     "require-dev": {
         "illuminate/contracts": "^10.0|^11.0",
