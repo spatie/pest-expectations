@@ -4,6 +4,13 @@ use Illuminate\Contracts\Validation\InvokableRule;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Translation\PotentiallyTranslatedString;
+use Illuminate\Console\Scheduling\CallbackEvent;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Console\Command;
+use Illuminate\Console\Scheduling\Event;
+
+use function PHPUnit\Framework\assertEquals;
+use function PHPUnit\Framework\assertNotNull;
 
 expect()->extend('toPassWith', function (mixed $value) {
     $rule = $this->value;
@@ -82,4 +89,32 @@ expect()->extend('toBeModel', function ($argument) {
     expect($argument->getKey())->not()->toBeNull('Argument model was not saved yet...');
 
     expect($this->value->getKey())->toBe($argument->getKey(), 'Value is not the same model');
+});
+
+expect()->extend('toBeScheduled', function (string|\Closure $callback) {
+    expect(class_exists($this->value))->toBeTrue("Expected `{$this->value}` to be a class.");
+
+    $schedule = resolve(Schedule::class);
+    $event = collect($schedule->events())->first(function (CallbackEvent|Event $event) {
+        if ($event instanceof CallbackEvent) {
+            return $event->getSummaryForDisplay() === $this->value;
+        }
+
+        if ($event instanceof Event && is_a($this->value, Command::class, allow_string: true)) {
+            /** @var Command */
+            $command = resolve($this->value);
+
+            return str_contains($event->command, $command->getName());
+        }
+    });
+
+    assertNotNull($event, sprintf('Expected `%s` to be scheduled.', $this->value));
+
+    if (is_string($callback)) {
+        $callback = fn (CallbackEvent|Event $event) => assertEquals($callback, $event->expression);
+    }
+
+    $callback($event);
+
+    return $this;
 });
