@@ -51,7 +51,7 @@ function registerSpatiePestHelpers(): void
         }
     }
 
-    function whenPhpVersion($phpVersion)
+    function whenPhpVersion($phpVersion): void
     {
         if (version_compare(PHP_VERSION, $phpVersion, '<')) {
             test()->markTestSkipped("This test will only run on PHP {$phpVersion} or higher");

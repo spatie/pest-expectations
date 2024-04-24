@@ -6,9 +6,12 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\JsonApiPaginate\JsonApiPaginateServiceProvider;
+use Spatie\PestExpectations\CustomAssertions;
 
 class TestCase extends Orchestra
 {
+    use CustomAssertions;
+
     protected function getPackageProviders($app): array
     {
         return [
@@ -27,5 +30,7 @@ class TestCase extends Orchestra
             $table->id();
             $table->timestamps();
         });
+
+        $this->registerCustomAssertions();
     }
 }
