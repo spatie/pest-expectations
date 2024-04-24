@@ -118,3 +118,28 @@ expect()->extend('toBeScheduled', function (string|\Closure $callback) {
 
     return $this;
 });
+
+expect()->extend('toHavePagination', function () {
+    expect($this->value)->assertJsonStructure([
+        'links' => [
+            '*' => [
+                'url',
+                'label',
+                'active',
+            ],
+        ],
+        'meta' => [
+            'current_page',
+            'first_page_url',
+            'from',
+            'last_page',
+            'last_page_url',
+            'next_page_url',
+            'path',
+            'per_page',
+            'prev_page_url',
+            'to',
+            'total',
+        ],
+    ]);
+});

@@ -23,6 +23,7 @@
         "laravel/pint": "^1.2",
         "orchestra/testbench": "^8.3|^9.0",
         "pestphp/pest": "^2.0",
+        "spatie/laravel-json-api-paginate": "^1.14",
         "spatie/ray": "^1.28"
     },
     "autoload": {
