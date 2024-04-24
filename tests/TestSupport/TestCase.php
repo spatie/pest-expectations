@@ -6,7 +6,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\JsonApiPaginate\JsonApiPaginateServiceProvider;
-use Spatie\PestExpectations\PestExpectationsServiceProvider;
 
 class TestCase extends Orchestra
 {
