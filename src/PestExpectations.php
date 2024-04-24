@@ -1,13 +1,13 @@
 <?php
 
+use Illuminate\Console\Command;
+use Illuminate\Console\Scheduling\CallbackEvent;
+use Illuminate\Console\Scheduling\Event;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Validation\InvokableRule;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Translation\PotentiallyTranslatedString;
-use Illuminate\Console\Scheduling\CallbackEvent;
-use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Console\Command;
-use Illuminate\Console\Scheduling\Event;
 
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertNotNull;
