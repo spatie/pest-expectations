@@ -78,6 +78,23 @@ expect($model)->toBeModel($anotherModel);
 
 The expectation will only pass if both models are Eloquent models of the same class, with the same key.
 
+#### toBeScheduled
+
+Expect that a value is a scheduled job, command or invokable class.
+
+```php
+expect(MyJob::class)->toBeScheduled('0 * * * *');
+```
+
+Optionally, you may pass a callback that accepts an `Illuminate\Console\Scheduling\Event` or `Illuminate\Console\Scheduling\CallbackEvent` instance, so you can run any assertion needed:
+
+```php
+expect(MyArtisanCommand::class)->toBeScheduled(function (Event $event) {
+    expect($event->getExpression())->toBe('0 0 * * *');
+    expect($event->getSummaryForDisplay())->toBe('Foo');
+});
+```
+
 ### Helpers
 
 This package offers various helpers that you can tack on any test. Here's an example of the `whenGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
