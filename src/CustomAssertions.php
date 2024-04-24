@@ -11,7 +11,7 @@ trait CustomAssertions
         $this->assertHasJsonApiPagination();
     }
 
-    protected function assertHasJsonApiPagination(): void
+    public function assertHasJsonApiPagination(): void
     {
         TestResponse::macro('assertHasJsonApiPagination', function () {
             $this->assertJsonStructure([
