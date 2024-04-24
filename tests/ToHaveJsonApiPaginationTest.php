@@ -14,5 +14,5 @@ it('can check if it has pagination', function () {
 
     $response = $this->get('/');
 
-    expect($response)->toHavePagination();
+    expect($response)->toHaveJsonApiPagination();
 });

@@ -119,7 +119,7 @@ expect()->extend('toBeScheduled', function (string|\Closure $callback) {
     return $this;
 });
 
-expect()->extend('toHavePagination', function () {
+expect()->extend('toHaveJsonApiPagination', function () {
     expect($this->value)->assertJsonStructure([
         'links' => [
             '*' => [
