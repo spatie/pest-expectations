@@ -5,10 +5,19 @@ namespace Spatie\PestExpectations\Tests\TestSupport;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Spatie\JsonApiPaginate\JsonApiPaginateServiceProvider;
+use Spatie\PestExpectations\PestExpectationsServiceProvider;
 
 class TestCase extends Orchestra
 {
-    public function getEnvironmentSetUp($app)
+    protected function getPackageProviders($app): array
+    {
+        return [
+            JsonApiPaginateServiceProvider::class,
+        ];
+    }
+
+    public function getEnvironmentSetUp($app): void
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
