@@ -2,6 +2,20 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.7.0 - 2024-04-24
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/spatie/pest-expectations/pull/18
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.0.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/17
+* feat: add `toBeScheduled` expectation by @innocenzi in https://github.com/spatie/pest-expectations/pull/20
+
+### New Contributors
+
+* @innocenzi made their first contribution in https://github.com/spatie/pest-expectations/pull/20
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.6.1...1.7.0
+
 ## 1.6.1 - 2024-03-11
 
 - support Laravel 11
