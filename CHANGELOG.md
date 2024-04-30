@@ -2,6 +2,19 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.8.0 - 2024-04-30
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/21
+* extend expect() with a `toHavePagination` assertions by @Nielsvanpach in https://github.com/spatie/pest-expectations/pull/19
+
+### New Contributors
+
+* @Nielsvanpach made their first contribution in https://github.com/spatie/pest-expectations/pull/19
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.7.0...1.8.0
+
 ## 1.7.0 - 2024-04-24
 
 ### What's Changed
