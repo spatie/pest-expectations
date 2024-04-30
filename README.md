@@ -95,6 +95,17 @@ expect(MyArtisanCommand::class)->toBeScheduled(function (Event $event) {
 });
 ```
 
+#### toHaveJsonApiPagination
+
+Expect that a response has JSON:API pagination.
+Have a look at our package [spatie/laravel-json-api-paginate](https://github.com/spatie/laravel-json-api-paginate) to see how to add JSON:API pagination to your Laravel app.
+
+```php
+$response = $this->get('/');
+
+expect($response)->toHaveJsonApiPagination();
+```
+
 ### Helpers
 
 This package offers various helpers that you can tack on any test. Here's an example of the `whenGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
@@ -117,6 +128,36 @@ These helpers are provided by this package:
 - `whenGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
 - `whenPhpVersion($version)`: the test will be skipped unless running on the given PHP version, or higher. You can pass a version like `8` or `8.1`.
+
+### Assertions
+
+This package also provides a set of custom assertions that you can use in your tests.
+
+In your `TestCase` class, you can use the `CustomAssertions` trait and call the `registerCustomAssertions` method in the `setUp` method.
+
+```php
+class TestCase extends \Illuminate\Foundation\Testing\TestCase
+{
+    use CustomAssertions;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->registerCustomAssertions();
+    }
+```
+
+#### assertHasJsonApiPagination
+
+Assert that a response has JSON:API pagination.
+Have a look at our package [spatie/laravel-json-api-paginate](https://github.com/spatie/laravel-json-api-paginate) to see how to add JSON:API pagination to your Laravel app.
+
+```php
+$this
+    ->get('/')
+    ->assertHasJsonApiPagination();
+```
 
 ## Testing
 
