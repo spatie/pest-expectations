@@ -78,6 +78,30 @@ expect($model)->toBeModel($anotherModel);
 
 The expectation will only pass if both models are Eloquent models of the same class, with the same key.
 
+#### toBeArrayOf
+
+Expect that a value is an array of the specified value.
+
+```php
+expect(User::all())->toBeArrayOf(User::class);
+```
+
+The specified value may be a class name or a class instance, or one of the following string values:
+- `'string'`
+- `'int'`
+- `'float'`
+- `'bool'`
+- `'scalar'`
+- `'array'`
+- `'object'`
+- `'null'`
+
+```php
+expect([1, 2])->toBeArrayOf('int');
+expect([true, false])->toBeArrayOf('bool');
+expect(['foo', 1, false])->toBeArrayOf('scalar');
+```
+
 #### toBeScheduled
 
 Expect that a value is a scheduled job, command or invokable class.
