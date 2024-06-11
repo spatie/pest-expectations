@@ -2,6 +2,14 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.9.0 - 2024-06-11
+
+### What's Changed
+
+* feat: add `toBeArrayOf` expectation by @innocenzi in https://github.com/spatie/pest-expectations/pull/22
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.8.0...1.9.0
+
 ## 1.8.0 - 2024-04-30
 
 ### What's Changed
