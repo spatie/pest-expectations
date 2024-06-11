@@ -141,3 +141,27 @@ expect()->extend('toHaveJsonApiPagination', function () {
         'total',
     ]);
 });
+
+expect()->extend('toBeArrayOf', function (string|object $class) {
+    if (is_object($class)) {
+        $class = get_class($class);
+    }
+
+    expect($this->value)->toBeArray();
+
+    foreach ($this->value as $value) {
+        match ($class) {
+            'string' => expect($value)->toBeString(),
+            'int' => expect($value)->toBeInt(),
+            'integer' => expect($value)->toBeInt(),
+            'float' => expect($value)->toBeFloat(),
+            'bool' => expect($value)->toBeBool(),
+            'boolean' => expect($value)->toBeBool(),
+            'scalar' => expect($value)->toBeScalar(),
+            'array' => expect($value)->toBeArray(),
+            'object' => expect($value)->toBeObject(),
+            'null' => expect($value)->toBeNull(),
+            default => expect($value)->toBeInstanceOf($class)
+        };
+    }
+});
