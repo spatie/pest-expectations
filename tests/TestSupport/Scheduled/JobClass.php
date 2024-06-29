@@ -15,8 +15,5 @@ final class JobClass implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public function __invoke(): void
-    {
-
-    }
+    public function __invoke(): void {}
 }
