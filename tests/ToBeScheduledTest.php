@@ -12,6 +12,12 @@ it('can assert a class is scheduled by passing a cron expression', function () {
     expect(InvokableClass::class)->toBeScheduled('0 * * * *');
 });
 
+it('can assert a class is scheduled by passing a cron expression and a timezone', function () {
+    Schedule::call(InvokableClass::class)->hourly()->timezone('Europe/Paris');
+    expect(InvokableClass::class)->toBeScheduled('0 * * * *', timezone: 'Europe/Paris');
+});
+
+
 it('can use a callback to assert anything on a scheduled class', function () {
     Schedule::call(InvokableClass::class)->hourly();
 

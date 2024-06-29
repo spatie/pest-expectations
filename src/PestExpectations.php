@@ -91,7 +91,7 @@ expect()->extend('toBeModel', function ($argument) {
     expect($this->value->getKey())->toBe($argument->getKey(), 'Value is not the same model');
 });
 
-expect()->extend('toBeScheduled', function (string|\Closure $callback) {
+expect()->extend('toBeScheduled', function (string|\Closure $callback, ?string $timezone = null) {
     expect(class_exists($this->value))->toBeTrue("Expected `{$this->value}` to be a class.");
 
     $schedule = resolve(Schedule::class);
@@ -111,7 +111,13 @@ expect()->extend('toBeScheduled', function (string|\Closure $callback) {
     assertNotNull($event, sprintf('Expected `%s` to be scheduled.', $this->value));
 
     if (is_string($callback)) {
-        $callback = fn (CallbackEvent|Event $event) => assertEquals($callback, $event->expression);
+        $callback = function (CallbackEvent|Event $event) use ($callback, $timezone) {
+            assertEquals($callback, $event->expression);
+
+            if (is_string($timezone)) {
+                assertEquals($timezone, $event->timezone);
+            }
+        };
     }
 
     $callback($event);
