@@ -6,6 +6,5 @@ final class UserData
 {
     public function __construct(
         public readonly string $full_name
-    ) {
-    }
+    ) {}
 }

@@ -104,10 +104,10 @@ expect(['foo', 1, false])->toBeArrayOf('scalar');
 
 #### toBeScheduled
 
-Expect that a value is a scheduled job, command or invokable class.
+Expect that a value is a scheduled job, command or invokable class. The `timezone` parameter, if passed, will also check that the specified timezone was defined.
 
 ```php
-expect(MyJob::class)->toBeScheduled('0 * * * *');
+expect(MyJob::class)->toBeScheduled('0 * * * *', timezone: 'Europe/Paris');
 ```
 
 Optionally, you may pass a callback that accepts an `Illuminate\Console\Scheduling\Event` or `Illuminate\Console\Scheduling\CallbackEvent` instance, so you can run any assertion needed:
