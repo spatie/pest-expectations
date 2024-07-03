@@ -2,6 +2,14 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.10.0 - 2024-07-03
+
+### What's Changed
+
+* feat: add timezone parameter to `toBeScheduled` by @innocenzi in https://github.com/spatie/pest-expectations/pull/23
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.9.0...1.10.0
+
 ## 1.9.0 - 2024-06-11
 
 ### What's Changed
