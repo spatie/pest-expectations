@@ -2,6 +2,21 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.10.1 - 2025-03-12
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/24
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/spatie/pest-expectations/pull/25
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/spatie/pest-expectations/pull/26
+* Add support for Laravel 12 by @AdamWills in https://github.com/spatie/pest-expectations/pull/27
+
+### New Contributors
+
+* @AdamWills made their first contribution in https://github.com/spatie/pest-expectations/pull/27
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.10.0...1.10.1
+
 ## 1.10.0 - 2024-07-03
 
 ### What's Changed
