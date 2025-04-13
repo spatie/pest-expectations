@@ -9,14 +9,13 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Translation\PotentiallyTranslatedString;
 
-use PHPUnit\Framework\ExpectationFailedException;
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertNotNull;
 
 expect()->extend('toPassWith', function (mixed $value) {
     $rule = $this->value;
 
-    if (!$rule instanceof InvokableRule && !$rule instanceof ValidationRule) {
+    if (! $rule instanceof InvokableRule && ! $rule instanceof ValidationRule) {
         throw new Exception('Value is not a rule');
     }
 
@@ -44,7 +43,7 @@ expect()->extend('toPassWith', function (mixed $value) {
 expect()->extend('toFailWith', function (mixed $value, ?string $expectedMessage = null) {
     $rule = $this->value;
 
-    if (!$rule instanceof InvokableRule && !$rule instanceof ValidationRule) {
+    if (! $rule instanceof InvokableRule && ! $rule instanceof ValidationRule) {
         throw new Exception('Value is not a rule');
     }
 
@@ -84,7 +83,7 @@ expect()->extend('toBeModel', function ($argument) {
     expect($argument)->toBeInstanceOf(Model::class, 'Argument is not a model');
     expect($this->value)->toBeInstanceOf(Model::class, 'Value is not a model');
 
-    expect($this->value)->toBeInstanceOf($argument::class, 'Value is not an instance of ' . get_class($argument));
+    expect($this->value)->toBeInstanceOf($argument::class, 'Value is not an instance of '.get_class($argument));
 
     expect($this->value->getKey())->not()->toBeNull('Value model was not saved yet...');
     expect($argument->getKey())->not()->toBeNull('Argument model was not saved yet...');

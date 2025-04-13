@@ -35,11 +35,11 @@ it('will fail when expecting the wrong validation message with translation', fun
 })->with('rulesWithTranslate')->throws(ExpectationFailedException::class);
 
 dataset('rules', [
-    new ValueShouldBeTrueInvokableRule(),
-    new ValueShouldBeTrueRule(),
+    new ValueShouldBeTrueInvokableRule,
+    new ValueShouldBeTrueRule,
 ]);
 
 dataset('rulesWithTranslate', [
-    new ValueShouldBeTrueInvokableRuleWithTranslate(),
-    new ValueShouldBeTrueRuleWithTranslate(),
+    new ValueShouldBeTrueInvokableRuleWithTranslate,
+    new ValueShouldBeTrueRuleWithTranslate,
 ]);

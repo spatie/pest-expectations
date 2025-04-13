@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\PestExpectations\Tests\TestSupport\Models\Post;
 
 it('can assert on an expect', function () {
-    (new Post())->save();
+    (new Post)->save();
 
     Route::any('/', function () {
         return Post::jsonPaginate();
