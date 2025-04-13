@@ -130,7 +130,7 @@ $response = $this->get('/');
 expect($response)->toHaveJsonApiPagination();
 ```
 
-## toBeInRange
+### toBeInRange
 
 Expect that a value is in the specified range. The range is inclusive, meaning that the start and end values are included in the range.
 
@@ -141,7 +141,7 @@ expect(5)->toBeInRange(1, 10); // passes
 expect(11)->toBeInRange(1, 10); // fails
 ```
 
-## toBeCloseTo
+### toBeCloseTo
 
 Expect that a value is close to the specified value. The first argument is the expected value, and the second argument is the deviation.
 
