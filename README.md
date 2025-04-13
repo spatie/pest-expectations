@@ -130,6 +130,30 @@ $response = $this->get('/');
 expect($response)->toHaveJsonApiPagination();
 ```
 
+## toBeInRange
+
+Expect that a value is in the specified range. The range is inclusive, meaning that the start and end values are included in the range.
+
+The first argument is the start of the range, and the second argument is the end of the range.
+
+```php
+expect(5)->toBeInRange(1, 10); // passes
+expect(11)->toBeInRange(1, 10); // fails
+```
+
+## toBeCloseTo
+
+Expect that a value is close to the specified value. The first argument is the expected value, and the second argument is the deviation.
+
+The deviation is the maximum difference between the expected value and the actual value.
+
+```php
+expect(5)->toBeCloseTo(4.89, deviation: 0.1); // fails
+expect(5)->toBeCloseTo(4.90, deviation: 0.1); // passes
+expect(5)->toBeCloseTo(5.1, deviation: 0.1); // passes
+expect(5)->toBeCloseTo(5.11, deviation: 0.1); // fails
+```
+
 ### Helpers
 
 This package offers various helpers that you can tack on any test. Here's an example of the `whenGitHubActions` helper. When tacked on to a test, the test will be skipped unless you're running it on GitHub Actions.
