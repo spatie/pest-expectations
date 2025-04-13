@@ -2,6 +2,12 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.11.0 - 2025-04-13
+
+- add `toBeInRange` and `toBeCloseTo`
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.10.1...1.11.0
+
 ## 1.10.1 - 2025-03-12
 
 ### What's Changed
