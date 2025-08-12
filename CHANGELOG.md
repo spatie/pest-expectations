@@ -2,6 +2,16 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.12.0 - 2025-08-12
+
+### What's Changed
+
+* add `whenIpv6Available`
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/spatie/pest-expectations/pull/28
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/spatie/pest-expectations/pull/30
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.11.0...1.12.0
+
 ## 1.11.0 - 2025-04-13
 
 - add `toBeInRange` and `toBeCloseTo`
