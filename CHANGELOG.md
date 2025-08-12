@@ -2,6 +2,15 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.13.1 - 2025-08-12
+
+### What's Changed
+
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/spatie/pest-expectations/pull/31
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/spatie/pest-expectations/pull/29
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.12.0...1.13.1
+
 ## 1.12.0 - 2025-08-12
 
 ### What's Changed
