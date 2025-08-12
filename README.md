@@ -176,6 +176,7 @@ These helpers are provided by this package:
 - `whenGitHubActions()`: the test will be skipped unless running on GitHub Actions
 - `skipOnGitHubActions()`: the test will be skipped when running on GitHub Actions
 - `whenPhpVersion($version)`: the test will be skipped unless running on the given PHP version, or higher. You can pass a version like `8` or `8.1`.
+- `whenIpv6Available`: the test will be skipped unless IPv6 is available
 
 ### Assertions
 
