@@ -61,12 +61,12 @@ function registerSpatiePestHelpers(): void
     function whenIpv6Available(): void
     {
         if (! filter_var('::1', FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-            test()->markTestSkipped("IPv6 is not supported on this system");
+            test()->markTestSkipped('IPv6 is not supported on this system');
         }
 
         $testSocket = @socket_create(AF_INET6, SOCK_STREAM, SOL_TCP);
         if ($testSocket === false) {
-            test()->markTestSkipped("IPv6 is not supported on this system: could not create a socket");
+            test()->markTestSkipped('IPv6 is not supported on this system: could not create a socket');
         }
 
         socket_close($testSocket);
@@ -76,7 +76,7 @@ function registerSpatiePestHelpers(): void
             // Check if there's a default IPv6 route
             $routes = @shell_exec('ip -6 route 2>/dev/null || route -n get -inet6 default 2>/dev/null');
             if (empty($routes) || strpos($routes, 'default') === false) {
-                test()->markTestSkipped("IPv6 is not supported on this system: no default IPv6 route found");
+                test()->markTestSkipped('IPv6 is not supported on this system: no default IPv6 route found');
             }
         }
     }
