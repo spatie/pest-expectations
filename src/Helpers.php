@@ -61,7 +61,7 @@ function registerSpatiePestHelpers(): void
     function whenIpv6Available(): bool
     {
         // Check if IPv6 is supported by the system
-        if (!filter_var('::1', FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+        if (! filter_var('::1', FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
             return false;
         }
 
