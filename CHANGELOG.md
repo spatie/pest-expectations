@@ -2,6 +2,10 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.13.3 - 2025-08-24
+
+**Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.13.2...1.13.3
+
 ## 1.13.2 - 2025-08-12
 
 **Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.13.1...1.13.2
