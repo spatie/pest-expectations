@@ -16,13 +16,13 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/database": "^10.7|^11.0|^12.0"
+        "illuminate/database": "^10.7|^11.0|^12.0|^13.0"
     },
     "require-dev": {
         "ext-sockets": "*",
-        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
         "laravel/pint": "^1.2",
-        "orchestra/testbench": "^8.3|^9.0|^10.0",
+        "orchestra/testbench": "^8.3|^9.0|^10.0|^11.0",
         "pestphp/pest": "^3.0|^4.0",
         "spatie/laravel-json-api-paginate": "^1.14",
         "spatie/ray": "^1.28"
