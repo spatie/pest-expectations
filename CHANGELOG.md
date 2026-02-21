@@ -2,6 +2,10 @@
 
 All notable changes to `pest-expectations` will be documented in this file.
 
+## 1.14.0 - 2026-02-21
+
+Add Laravel 13 and PHP 8.5 support
+
 ## 1.13.3 - 2025-08-24
 
 **Full Changelog**: https://github.com/spatie/pest-expectations/compare/1.13.2...1.13.3
