@@ -1,7 +1,7 @@
 # A collection of handy custom Pest customizations
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/pest-expectations.svg?style=flat-square)](https://packagist.org/packages/spatie/pest-expectations)
-[![Tests](https://img.shields.io/github/actions/workflow/status/spatie/pest-expectations/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/pest-expectations/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/spatie/pest-expectations/actions/workflows/run-tests.yml/badge.svg)](https://github.com/spatie/pest-expectations/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/pest-expectations.svg?style=flat-square)](https://packagist.org/packages/spatie/pest-expectations)
 
 This repo contains custom expectations to be used in a [Pest](https://pestphp.com) test suite.
