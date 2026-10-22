@@ -16,7 +16,7 @@ it('can only run well on github actions', function () {
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/pest-expectations.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/pest-expectations)
+[<img src="https://spatie.be/github-ad-image/pest-expectations.jpg" width="419px" />](https://spatie.be/github-ad-click/pest-expectations)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
